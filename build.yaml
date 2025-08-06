@@ -1,0 +1,15 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - .env
+      - $package$
+    builders:
+      json_serializable:
+        options:
+          field_rename: snake
+        generate_for:
+          - lib/data/**/*.dart
+      retrofit_generator:
+        generate_for:
+          - lib/data/**/*.dart
