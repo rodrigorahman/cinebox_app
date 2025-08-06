@@ -249,6 +249,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.1"
+  dio:
+    dependency: "direct main"
+    description:
+      name: dio
+      sha256: "253a18bbd4851fecba42f7343a1df3a9a4c1d31a2c1b37e221086b4fa8c8dbc9"
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.8.0+1"
+  dio_web_adapter:
+    dependency: transitive
+    description:
+      name: dio_web_adapter
+      sha256: "7586e476d70caecaf1686d21eee7247ea43ef5c345eab9e0cc3583ff13378d78"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.1"
   envied:
     dependency: "direct main"
     description:
@@ -396,13 +412,21 @@ packages:
     source: hosted
     version: "0.7.2"
   json_annotation:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: json_annotation
       sha256: "1ce844379ca14835a50d2f019a3099f419082cfdd231cd86a142af94dd5c6bb1"
       url: "https://pub.dev"
     source: hosted
     version: "4.9.0"
+  json_serializable:
+    dependency: "direct dev"
+    description:
+      name: json_serializable
+      sha256: ce2cf974ccdee13be2a510832d7fba0b94b364e0b0395dee42abaa51b855be27
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.10.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -435,6 +459,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.1"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: "55d6c23a6c15db14920e037fe7e0dc32e7cdaf3b64b4b25df2d541b5b6b81c0c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.6.1"
   logging:
     dependency: transitive
     description:
@@ -515,6 +547,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.5.1"
+  protobuf:
+    dependency: transitive
+    description:
+      name: protobuf
+      sha256: "6153efcc92a06910918f3db8231fd2cf828ac81e50ebd87adc8f8a8cb3caff0e"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.1.1"
   pub_semver:
     dependency: transitive
     description:
@@ -539,6 +579,22 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.0"
+  retrofit:
+    dependency: "direct main"
+    description:
+      name: retrofit
+      sha256: aa128e12ea56056bd4ebd1058e8421464595e4dc335b58ea346df86a31be9a02
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.7.0"
+  retrofit_generator:
+    dependency: "direct dev"
+    description:
+      name: retrofit_generator
+      sha256: bf8c5fc06d92de0cc79ace127a620af6dcbabaf7426da91e308a5bc3a0266c3e
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.0"
   riverpod:
     dependency: transitive
     description:
@@ -632,6 +688,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  source_helper:
+    dependency: transitive
+    description:
+      name: source_helper
+      sha256: "4f81479fe5194a622cdd1713fe1ecb683a6e6c85cd8cec8e2e35ee5ab3fdf2a1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.6"
   source_map_stack_trace:
     dependency: transitive
     description:

@@ -37,6 +37,10 @@ dependencies:
   flutter_riverpod: ^3.0.0-dev.17
   riverpod_annotation: ^3.0.0-dev.17
   envied: ^1.2.0
+  retrofit: ^4.7.0
+  logger: ^2.6.1
+  json_annotation: ^4.9.0
+  dio: ^5.8.0+1
 
 
 dev_dependencies:
@@ -54,6 +58,8 @@ dev_dependencies:
   custom_lint: ^0.8.0
   riverpod_lint: ^3.0.0-dev.17
   envied_generator: ^1.2.0
+  retrofit_generator: ^10.0.0
+  json_serializable: ^6.10.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
