@@ -1,4 +1,6 @@
 import 'package:cinebox/ui/core/themes/resource.dart';
+import 'package:cinebox/ui/login/commands/login_with_google_command.dart';
+import 'package:cinebox/ui/login/login_view_model.dart';
 import 'package:cinebox/ui/login/widgets/sign_in_google_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -35,7 +37,18 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                 Image.asset(R.ASSETS_IMAGES_LOGO_PNG),
                 Padding(
                   padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
-                  child: SignInGoogleButton(),
+                  child: Consumer(
+                    builder: (context, ref, child) {
+                      final state = ref.watch(loginWithGoogleCommandProvider);
+                      return SignInGoogleButton(
+                        isLoading: state.isLoading,
+                        onPressed: () {
+                          final viewModel = ref.read(loginViewModelProvider);
+                          viewModel.googleLogin();
+                        },
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
