@@ -1,4 +1,5 @@
 import 'package:cinebox/ui/home/widget/home_bottom_nav_bar.dart';
+import 'package:cinebox/ui/movies/movies_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,9 +21,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           opacity: animation,
           child: child,
         ),
-        child: Container(
-          color: Colors.red,
-        ),
+        child: MoviesScreen(),
       ),
       bottomNavigationBar: HomeBottomNavBar(),
     );
