@@ -31,9 +31,12 @@ class MoviesBox extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             physics: BouncingScrollPhysics(),
             padding: EdgeInsets.only(left: 20),
-            itemCount: 10,
+            itemCount: 100,
             itemBuilder: (context, index) {
-              return MovieCard();
+              return Container(
+                margin: EdgeInsets.only(right: 16),
+                child: MovieCard(),
+              );
             },
           ),
         ),
