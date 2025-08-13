@@ -17,6 +17,7 @@ class _MoviesBySearchState extends ConsumerState<MoviesBySearch> {
       child: MoviesBox(
         title: 'Filmes Encontrados Busca',
         vertical: true,
+        movies: [],
       ),
     );
   }

@@ -7,14 +7,14 @@ part 'movie_response.g.dart';
 class MovieResponse {
   final int page;
   final List<MovieItem> results;
-  final int totalResults;
-  final int totalpages;
+  final int? totalResults;
+  final int? totalpages;
 
   MovieResponse({
     required this.page,
     required this.results,
-    required this.totalResults,
-    required this.totalpages,
+    this.totalResults,
+    this.totalpages,
   });
 
   factory MovieResponse.fromJson(Map<String, dynamic> json) =>

@@ -1,11 +1,18 @@
+import 'package:cinebox/domain/models/movie.dart';
 import 'package:cinebox/ui/core/widgets/movie_card.dart';
 import 'package:flutter/material.dart';
 
 class MoviesBox extends StatelessWidget {
   final String title;
   final bool vertical;
+  final List<Movie> movies;
 
-  const MoviesBox({super.key, required this.title, this.vertical = false});
+  const MoviesBox({
+    super.key,
+    required this.title,
+    this.vertical = false,
+    required this.movies,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +40,19 @@ class MoviesBox extends StatelessWidget {
               runSpacing: 20,
               runAlignment: WrapAlignment.center,
               children: [
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
-                MovieCard(),
+                for (var movie in movies)
+                  MovieCard(
+                    id: movie.id,
+                    title: movie.title,
+                    year:
+                        movie.releaseDate != null &&
+                            movie.releaseDate!.isNotEmpty
+                        ? DateTime.parse(movie.releaseDate!).year
+                        : DateTime.now().year,
+                    imageUrl:
+                        'https://images.tmdb.org/t/p/w154/${movie.posterPath}',
+                    isFavorite: movie.isFavorite,
+                  ),
               ],
             ),
           ),
@@ -54,11 +63,23 @@ class MoviesBox extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: BouncingScrollPhysics(),
               padding: EdgeInsets.only(left: 20),
-              itemCount: 100,
+              itemCount: movies.length,
               itemBuilder: (context, index) {
+                final movie = movies[index];
                 return Container(
                   margin: EdgeInsets.only(right: 16),
-                  child: MovieCard(),
+                  child: MovieCard(
+                    id: movie.id,
+                    title: movie.title,
+                    year:
+                        movie.releaseDate != null &&
+                            movie.releaseDate!.isNotEmpty
+                        ? DateTime.parse(movie.releaseDate!).year
+                        : DateTime.now().year,
+                    imageUrl:
+                        'https://images.tmdb.org/t/p/w154/${movie.posterPath}',
+                    isFavorite: movie.isFavorite,
+                  ),
                 );
               },
             ),

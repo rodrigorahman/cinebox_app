@@ -12,8 +12,8 @@ MovieResponse _$MovieResponseFromJson(Map<String, dynamic> json) =>
       results: (json['results'] as List<dynamic>)
           .map((e) => MovieItem.fromJson(e as Map<String, dynamic>))
           .toList(),
-      totalResults: (json['total_results'] as num).toInt(),
-      totalpages: (json['totalpages'] as num).toInt(),
+      totalResults: (json['total_results'] as num?)?.toInt(),
+      totalpages: (json['totalpages'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$MovieResponseToJson(MovieResponse instance) =>

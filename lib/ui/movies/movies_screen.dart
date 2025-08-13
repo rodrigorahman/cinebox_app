@@ -16,6 +16,14 @@ class MoviesScreen extends ConsumerStatefulWidget {
 
 class _MoviesScreenState extends ConsumerState<MoviesScreen> {
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(moviesViewModelProvider.notifier).fetchMoviesByCategory();
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     final moviesViewModel = ref.watch(moviesViewModelProvider);
 
