@@ -15,7 +15,7 @@ class _MoviesBySearchState extends ConsumerState<MoviesBySearch> {
     return Container(
       margin: EdgeInsets.only(bottom: 130),
       child: MoviesBox(
-        title: 'Filmes Encontrados',
+        title: 'Filmes Encontrados Busca',
         vertical: true,
       ),
     );
