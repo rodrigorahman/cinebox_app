@@ -22,7 +22,7 @@ abstract class TmdbService {
   });
 
   @GET('/movie/top_rated')
-  Future<MovieResponse> getTopRagedMovies({
+  Future<MovieResponse> getTopRatedMovies({
     @Query('language') String language = 'pt-BR',
     @Query('page') int page = 1,
   });
