@@ -1,4 +1,4 @@
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import './local_storage_service.dart';

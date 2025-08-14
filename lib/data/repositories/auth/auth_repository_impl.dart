@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/data/exceptions/data_exception.dart';
 import 'package:cinebox/data/services/auth/auth_service.dart';
 import 'package:cinebox/data/services/google_signin/google_signin_service.dart';

@@ -1,4 +1,4 @@
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 
 abstract interface class LocalStorageService {
   Future<Result<Unit>> saveIdToken(String token);

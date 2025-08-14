@@ -1,4 +1,4 @@
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/domain/models/genre.dart';
 import 'package:cinebox/domain/models/movie.dart';
 

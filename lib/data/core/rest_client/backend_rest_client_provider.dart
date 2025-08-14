@@ -1,6 +1,6 @@
 import 'package:cinebox/cinebox_main_app.dart';
 import 'package:cinebox/config/env.dart';
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/data/services/services_providers.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';

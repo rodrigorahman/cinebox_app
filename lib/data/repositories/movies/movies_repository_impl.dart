@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/data/exceptions/data_exception.dart';
 import 'package:cinebox/data/models/save_favorite_movie.dart';
 import 'package:cinebox/data/services/movies/movies_service.dart';

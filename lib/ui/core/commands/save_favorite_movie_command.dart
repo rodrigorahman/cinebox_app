@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/data/repositories/repositories_providers.dart';
 import 'package:cinebox/domain/models/favorite_movie.dart';
 import 'package:cinebox/ui/core/commands/favorite_movie_command.dart';

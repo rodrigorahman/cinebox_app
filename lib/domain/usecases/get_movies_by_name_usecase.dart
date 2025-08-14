@@ -1,4 +1,4 @@
-import 'package:cinebox/config/result/result.dart';
+import 'package:cinebox/core/result/result.dart';
 import 'package:cinebox/data/repositories/movies/movies_repository.dart';
 import 'package:cinebox/data/repositories/tmdb/tmdb_repository.dart';
 import 'package:cinebox/domain/extensions/mark_favorite_extension.dart';
