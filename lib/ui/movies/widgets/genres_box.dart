@@ -54,7 +54,6 @@ class _GenresBoxState extends ConsumerState<GenresBox> {
                 child: ValueListenableBuilder(
                   valueListenable: selectedGenre,
                   builder: (_, value, _) {
-                    print('Genero: $value');
                     return Container(
                       margin: EdgeInsets.only(right: 8),
                       decoration: BoxDecoration(
