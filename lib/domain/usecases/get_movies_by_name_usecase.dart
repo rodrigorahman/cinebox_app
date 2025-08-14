@@ -16,7 +16,7 @@ class GetMoviesByNameUsecase {
        _moviesRepository = moviesRepository;
 
   Future<Result<List<Movie>>> execute({required String name}) async {
-    final results = Future.wait([
+    final results = await Future.wait([
       _moviesRepository.getMyFavoritesMovies(),
       _tmdbRepository.searchMovies(
         query: name,
@@ -25,10 +25,10 @@ class GetMoviesByNameUsecase {
 
     if (results case [
       Success<List<FavoriteMovie>>(value: final favorites),
-      Success<List<Movie>>(value: final movieByGenre),
+      Success<List<Movie>>(value: final movies),
     ]) {
       final favoritesIDs = favorites.map((f) => f.id).toList();
-      return Success(movieByGenre.markAsFavorite(favoritesIDs));
+      return Success(movies.markAsFavorite(favoritesIDs));
     }
 
     return Failure(Exception('Erro ao buscar os filmes por nome'));
